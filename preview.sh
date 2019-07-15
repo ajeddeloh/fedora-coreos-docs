@@ -14,5 +14,5 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     echo ""
     echo "This build script is using Docker to run the build in an isolated environment. You might be asked for a root password in order to start it."
     echo "The preview will be available at http://localhost:8080/"
-    sudo docker run --rm -v $(pwd)/public:/usr/share/nginx/html:ro -p 8080:80 nginx
+    docker run --rm -v $(pwd)/public:/usr/share/nginx/html:ro -p 8080:80 nginx
 fi

@@ -12,5 +12,5 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     # which requires root.
     echo ""
     echo "This build script is using Docker to run the build in an isolated environment. You might be asked for a root password in order to start it."
-sudo docker run --rm -it -v $(pwd):/antora:z antora/antora --html-url-extension-style=indexify site.yml
+docker run --rm -it -v $(pwd):/antora:z antora/antora --html-url-extension-style=indexify site.yml
 fi
